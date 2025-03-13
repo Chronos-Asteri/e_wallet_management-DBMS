@@ -23,7 +23,13 @@
             <tr>
                 <td>{{ task.content }}</td>
                 <td>${{ task.balance }}</td>
-                <td>{{ task.bank_name }}</td>
+                <td>
+                    {% if task.bank_id == 1 %} IDFC First Bank {% endif %}
+                    {% if task.bank_id == 2 %} ICICI Bank {% endif %}
+                    {% if task.bank_id == 3 %} Canara Bank {% endif %}
+                    {% if task.bank_id == 4 %} SBM Bank {% endif %}
+                    {% if task.bank_id == 5 %} Axis Bank {% endif %}
+                </td>
 
                     {% if task.status == 'Active' %}
                     <td style="background-color: #04AA6D; font-size: 20px; margin-top: 10px"> Active </td>
