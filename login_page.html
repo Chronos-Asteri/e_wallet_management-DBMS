@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login User</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">User Login</h1>
+
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            <span style="text-align: center">
+                <div class="form">
+                    <p style="font-size: 17px; margin-bottom: 5px"> <b>Username</b> </p>
+                    {{ form.username }}
+                    <br>
+                    <br>
+                    <p style="font-size: 17px; margin-bottom: 5px; margin-top: 5px"> <b>Password</b> </p>
+                    {{ form.password }}
+                    <br>
+                    <br>
+                    {{ form.submit }}
+                </div>
+            </span>             
+        </form>
+
+        <h3 style="text-align: center; margin-bottom: 10px;"><a href="{{url_for('register')}}"><i>New User? Register Here</i></a></h3>
+
+</div>
+{% endblock %}
