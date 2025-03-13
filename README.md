@@ -1,5 +1,5 @@
 # e_wallet_management_system
-Purpose - Software Engineering Lab Practical
+Purpose - Database Management System Practical
 
 ```
 Name -> M K Lino Roshaan
