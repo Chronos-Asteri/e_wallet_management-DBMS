@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Manage</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center"><b><i>{{task.content}}</i></b> Wallet</h1>
+
+    <h3 style="text-align: center"><a href="/"><i>Home</i></a></h3>
+
+    <h2 style="text-align: center">Current Balance ${{task.balance}}</h2>
+
+    {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning" style="background-color: #FFFF00; font-size: 17px; margin-top: 10px; text-align: center">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <ul>
+        <form action="/send_money/{{task.id}}" method="POST">
+            <li> Receiver's Username
+                <span style="text-align: left">
+                    <div class="form">
+                        <input type="text" name="recv_username" id="recv_username">
+                    </div>
+                </span>
+            </li>
+            <br>
+            <li> Amount To Be Transferred
+                <span style="text-align: left">
+                    <div class="form">
+                        <input type="number" name="transfer" id="transfer">     
+                    </div>
+                </span>
+            </li>
+            <li>
+                <span style="text-align: left">
+                    <div class="form">
+                        <input style="background-color: #53dc14; font-size: 20px; margin-top: 10px; width: 400px; margin-bottom: 10px" type="submit" value="Send">
+                    </div>
+                </span>
+            </li>
+        </form>
+    </ul>
+    
+</div>
+{% endblock %}
