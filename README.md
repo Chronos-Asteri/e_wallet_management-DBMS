@@ -15,8 +15,8 @@ Roll No -> 2K22/MC/87
 ### Index:
 - [Prerequisites](#prerequisites)
 - [Local Deployment](#local-deployment)
-- [E-R Diagram](#sde-diagrams)
-- [Database Relations](#screenshots)
+- [E-R Diagram](#e-r-diagram)
+- [Database Relations](#database-relations)
 - [Screenshots](#screenshots)
 
 
